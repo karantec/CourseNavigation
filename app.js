@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 /* =======================
    Health Check
 ======================= */
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("You are connected to CourseNavigation server");
 });
 
