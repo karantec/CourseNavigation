@@ -41,6 +41,15 @@ app.use((req, res, next) => {
   next();
 });
 
+// Enable CORS for all routes
+app.use(
+  cors({
+    origin: "http://localhost:3000", // Your frontend URL
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  }),
+);
 /* =======================
    Health Check
 ======================= */
